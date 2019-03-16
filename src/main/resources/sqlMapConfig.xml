@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	
+	
+	<!-- 1. settings:  全局参数配置，包含了很多重要的设置项 -->
+	<settings>
+		<!-- 映射下划线到驼峰命名，驼峰命名法 -->
+		<setting name="mapUnderscoreToCamelCase" value="true"/>
+	</settings>
+	
+	<!-- mybatis-pageHelper分页插件 -->
+	<plugins>
+		<plugin interceptor="com.github.pagehelper.PageInterceptor">
+			<!--分页参数合理化  -->
+			<property name="reasonable" value="true"/>
+		</plugin>
+	</plugins>
+
+	
+</configuration>
